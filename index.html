@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="circle__wrapper">
+        <div class="circle__wrp">
+          <span class="left">
+              <span class="bar"></span>
+          </span>
+          <span class="right">
+              <span class="bar"></span>
+          </span>
+        </div>
+        <div class="circle__svg">
+          <svg x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 200 300" xml:space="preserve">
+            <defs>
+              <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+            </defs>
+            <circle cx="150" cy="100" r="75" fill="none"/>
+            <g>
+              <use xlink:href="#circlePath" fill="none"/>
+              <text x="100px" id="text-dyno-width" fill=" white">
+                <textPath xlink:href="#circlePath" ">АLASKA_ALEX HTTPS://аласкаалекс.рф</textPath>
+              </text>
+            </g>
+          </svg>
+        </div>
+      </div>
+</body>
+</html>

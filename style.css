@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(84, 7, 7);
+  }
+  
+  .circle__wrapper {
+    position: relative;
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    animation: animate 4s linear infinite;
+  }
+  
+  .circle__wrp {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    transform: rotate(175deg);
+  }
+  
+  .circle__wrp:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .circle__wrp>span {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .circle__wrp .left {
+    left: 0;
+  }
+  
+  .circle__wrp .left .bar {
+    left: 100%;
+    border-radius: 100px 100px 0 0;
+    transform-origin: center left;
+    transform: rotate(0deg);
+  }
+  
+  .circle__wrp .bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 6px solid rgb(84, 7, 7);
+  }
+  
+  .circle__wrp .right {
+    right: 0;
+  }
+  
+  .circle__wrp .right .bar {
+    left: -100%;
+    width: 200px;
+    height: 200px;
+    border: double 8px transparent;
+    border-radius: 50%;
+    transform-origin: center right;
+    transform: rotate(0deg);
+    background-image: linear-gradient(rgb(84, 7, 7), rgb(84, 7, 7)), radial-gradient(circle at top left, rgb(15, 15, 15), rgb(15, 15, 15), rgb(15, 15, 15));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+  
+  .circle__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+  
+  .circle__svg text {
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    
+  }
+  
+  .circle__svg svg {
+    position: absolute;
+    top: -125px;
+    left: -125px;
+    right: 0;
+    bottom: 0;
+    width: 450px;
+    height: 450px;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
